@@ -1,0 +1,22 @@
+name: DEVxDAO on push
+on: [push]
+
+env:
+  GITHUB_USER_PASS: ${{ secrets.MAVEN_PASSWORD }}
+  GITHUB_USER_NAME: ${{ secrets.MAVEN_USERNAME }}
+  MAVEN_CLI_OPTS: -s .m2/settings.xml --batch-mode
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ secrets.MAVEN_USERNAME }}
+          password: ${{ secrets.MAVEN_PASSWORD }}
+      - name: Prepare
+        run: make -e prepare
+      - name: Build and test
+        run: make -e clean test

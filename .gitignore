@@ -1,0 +1,6 @@
+Cargo.lock
+target
+tests/wasm/*.wasm
+.idea
+.DS_Store
+.vscode

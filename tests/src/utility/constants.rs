@@ -1,3 +1,5 @@
+/* Modified by Noumena */
+
 pub(crate) const NFT_CONTRACT_WASM: &str = "contract.wasm";
 pub(crate) const MINT_SESSION_WASM: &str = "mint_call.wasm";
 pub(crate) const BALANCE_OF_SESSION_WASM: &str = "balance_of_call.wasm";

@@ -1,3 +1,5 @@
+/* Modified by Noumena */
+
 pub const ARG_COLLECTION_NAME: &str = "collection_name";
 pub const ARG_COLLECTION_SYMBOL: &str = "collection_symbol";
 pub const ARG_TOTAL_TOKEN_SUPPLY: &str = "total_token_supply";

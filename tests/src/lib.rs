@@ -1,3 +1,5 @@
+/* Modified by Noumena */
+
 // A collection of tests that are focused
 // around burning tokens.
 #[cfg(test)]
